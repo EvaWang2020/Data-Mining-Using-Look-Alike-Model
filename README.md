@@ -1,15 +1,14 @@
-This expo explains how to use a look-alike model to find the target audience through similarity scores. A similarity score describes the similarity between an instance and the known good or bad instance. The model itself is a formula and can be repeatedly applied to new datasets. Previous I wrote an [article explaining the whole process](https://evaanalytics.wixsite.com/website/post/target-high-value-audience-using-look-alike-model). In this repo, I will add a choice to use R to find the most correlated variables to postal code average spending using Pearson Correlation Matrix. It is more accurate to use R to find the correlation coefficient.  It is also more flexible, as it allows you to remove, add or change as many variables to test as you can.
+This expo provides insights into utilizing a look-alike model to identify target audiences based on similarity scores. A similarity score measures the resemblance between an instance and known good or bad instances. The model, essentially a formula, can be iteratively applied to new datasets. For a detailed walkthrough of the entire process, refer to my previously written article Target High-Value Audience Using Look-Alike Model (https://evaanalytics.wixsite.com/website/post/target-high-value-audience-using-look-alike-model).
+
+In this repository, I introduce an option to leverage R for identifying the most correlated variables to postal code average spending using the Pearson Correlation Matrix. Utilizing R for this task offers enhanced accuracy compared to the manual method used in the article Target High-Value Audience Using Look-Alike Model. Moreover, it provides greater flexibility, allowing for the addition, removal, or modification of variables to test various hypotheses.
 
 **Repo documents**:
 
-Look_Alike_Model.sql
-- It is a T-SQL script to find the most profitable postal code, create the model, calculate the distance and find the most similar postal codes
+- __Look_Alike_Model.sql__: A T-SQL script facilitating the identification of profitable postal codes, model creation, distance calculation, and identification of similar postal codes.
 
-Prepare_dataset_for_pearson_correlation_matrix.sql
-- It is a T-SQL script to get the dataset, which is used for the correlation matrix creation. After you save the output into an Excel /CSV file, you need to replace all the “NULL” texts with nothing. 
+- __Prepare_dataset_for_pearson_correlation_matrix.sql__: A T-SQL script to obtain the dataset required for creating the correlation matrix. After exporting the output to an Excel/CSV file, replace all instances of "NULL" with blank values.
 
-Pearson_Correlation_Matrix. ipynb
-- It is a Jupyter notebook indicating how to use R to create a Pearson Correlation Matrix, which include correlation coefficients between multiple pairs of variables.
+- __Pearson_Correlation_Matrix.ipynb__: A Jupyter notebook demonstrating the use of R to generate a Pearson Correlation Matrix, providing correlation coefficients between multiple pairs of variables.
 
-TargetAnalysisTable.7z
-- It is a zip file that includes the dataset in CSV format. The “Null” texts have been removed.
+- __TargetAnalysisTable.7z__: A zip file containing the dataset in CSV format, with "NULL" values removed."
+
